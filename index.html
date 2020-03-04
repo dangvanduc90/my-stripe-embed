@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title of the document</title>
+    <script src="moment.js"></script>
+    <script src="stripe.js"></script>
+</head>
+
+<body>
+Content of the document......
+</body>
+<script>
+    let obj = new Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx', 'dang');
+    obj.addElements(2);
+    obj.addElements(4);
+    obj.addElements(5);
+    console.log(obj.getElements())
+</script>
+</html>
