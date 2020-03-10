@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title of the document</title>
-    <script src="moment.js"></script>
+
     <script src="stripe.js"></script>
+    <link rel="stylesheet" href="https://checkout.stripe.com/v3/checkout/button.css"></link>
+
 </head>
 
 <body>
+    <div id="check_out"></div>
 Content of the document......
 </body>
 <script>
-    let obj = new Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx', 'dang');
-    obj.addElements(2);
-    obj.addElements(4);
-    obj.addElements(5);
-    console.log(obj.getElements())
+    let stripe = new Stripe(
+        'check_out', // id of css
+        'pk_test_TYooMQauvdEDq54NiTphI7jx', // key
+        { //order
+            mrc_order_id: `my_order_id_${Math.random().toString(36).substring(2)}_${Date.now()}`,
+            total_amount: 60000,
+            description: 'thanh toan dien thoai iphone xs max gia re',
+            url_success: 'http://mywebsite.com/success',
+            url_detail: 'http://mywebsite.com/url_detail',
+            webhooks: 'http://mywebsite.com/webhooks',
+            items: JSON.stringify([]),
+            accept_qrpay: 1,
+            accept_bank: 1,
+            accept_cc: 1,
+        },
+        { // button config
+            title: 'Thanh toán voi stripe',
+            style: {
+                background: '#fff'
+            }
+        });
+    stripe.create();
 </script>
 </html>
