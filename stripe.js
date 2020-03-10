@@ -24,6 +24,15 @@ class NotPresentException extends Error {
   }
 }
 
+/**
+ * New instance Stripe.
+ * @constructor
+ * @param {string} selector - The id where button checkout will appear.
+ * @param {string} apiKey - The apiKey which baokim given to merchant.
+ * @param {object} configOrder - The configOrder which merchant send to baokim.
+ * @param {object} configButton - The button decorate.
+ * @returns {string} message - The message.
+ */
 class Stripe {
   constructor(selector = '', apiKey = '', configOrder = {}, configButton = {}) {
     this.selector = selector;
