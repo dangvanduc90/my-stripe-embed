@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title of the document</title>
 
-    <script src="stripe.js"></script>
+    <script src="baokim.js"></script>
     <link rel="stylesheet" href="https://checkout.stripe.com/v3/checkout/button.css"></link>
 
 </head>
@@ -14,23 +14,19 @@
 Content of the document......
 </body>
 <script>
-    let stripe = new Stripe(
+    let stripe = new Baokim(
         'check_out', // id of css
-        'pk_test_TYooMQauvdEDq54NiTphI7jx', // key
+        'a18ff78e7a9e44f38de372e093d87ca1', // key
         { //order
             mrc_order_id: `my_order_id_${Math.random().toString(36).substring(2)}_${Date.now()}`,
             total_amount: 60000,
+            payment_method_type: 'card',
             description: 'thanh toan dien thoai iphone xs max gia re',
-            url_success: 'http://mywebsite.com/success',
-            url_detail: 'http://mywebsite.com/url_detail',
-            // webhooks: 'http://mywebsite.com/webhooks',
-            items: JSON.stringify([]),
-            accept_qrpay: 1,
-            accept_bank: 1,
-            accept_cc: 1,
+            success_url: 'http://my-merchant.com/callback-success',
+            cancel_url: 'http://my-merchant.com/callback-cancel',
         },
         { // button config
-            title: 'Thanh toán voi stripe',
+            title: 'Thanh toán voi baokim',
             style: {
                 background: '#fff'
             }
