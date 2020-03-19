@@ -1,0 +1,112 @@
+.baokim-form-wrapper {
+    padding: 1em 0;
+    background-color: #58b15b;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.baokim-form-wrapper form {
+    background: #fff;
+    padding: 4em 4em 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+}
+.baokim-form-wrapper form h2 {
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #666;
+    border-bottom: solid 1px #e5e5e5;
+}
+.baokim-form-wrapper form p {
+    margin: 0 0 3em 0;
+    position: relative;
+}
+.baokim-form-wrapper form input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    margin: 0;
+}
+.baokim-form-wrapper form input[type="text"], form input[type="password"] {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 1.4em;
+    padding: 0.8em 0.5em;
+    border-radius: 2px;
+}
+.baokim-form-wrapper form input[type="text"]:focus, form input[type="password"]:focus {
+    background: #fff;
+}
+.baokim-form-wrapper form span {
+    display: block;
+    padding: 2px 5px;
+    color: #666;
+    font-size: 0.85em;
+}
+.baokim-form-wrapper form span.title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.baokim-form-wrapper form input[type="submit"] {
+    background: rgba(148, 186, 101, 0.7);
+    box-shadow: 0 3px 0 0 rgba(123, 163, 73, 0.7);
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    margin: 2em 0 0;
+    outline: none;
+    padding: 0.8em 0;
+    text-shadow: 0 1px #68b25b;
+    transition: all .35s ease-in-out;
+}
+.baokim-form-wrapper form input[type="submit"]:hover {
+    background: rgba(148, 175, 101, 1);
+    text-shadow: 0 1px 3px rgba(70, 93, 41, 0.7);
+}
+.baokim-form-wrapper form label {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: #999;
+    font-size: 16px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+}
+.baokim-form-wrapper form label.floatLabel {
+    top: -11px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3em;
+}
+
+
+.baokim-form-wrapper .bank_list #b_l {
+    list-style-type: none;
+}
+
+.baokim-form-wrapper .bank_list #b_l li {
+    display: inline-block;
+    width: 90px;
+    margin: 10px 10px 0 0;
+    border-bottom: none;
+    padding: 0 !important;
+}
+
+img {
+    min-width: 30px;
+    min-height: 45px;
+}
+
+.bank_list {
+    margin-top: 0px;
+    clear: both;
+}
