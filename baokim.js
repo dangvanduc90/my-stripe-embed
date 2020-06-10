@@ -113,8 +113,8 @@ class Baokim {
       }
     }
 
-    let html = `<div class="baokim-form-wrapper"><form method="post" action="http://sandbox.baokim.vn/payment/checkout" id="form-action">
-                <div class="row-fluid customer_info ">
+    let html = `<div class="baokim-form-wrapper payment_list"><form method="post" action="http://sandbox.baokim.vn/payment/checkout" id="form-action">
+                <div class="row-fluid customer_info">
                     <div class="info">
                         <h2 class="title">Thông tin đơn hàng<!--<img src="images/safe.png" border="0" style="vertical-align: bottom; margin-left: 5px;" />--></h2>
                           <p>
@@ -173,6 +173,7 @@ class Baokim {
                     </div>
                     <div class="check_box"></div>
                 </div>
+                <div style="clear: both"></div>
                 <div class="row-fluid method" id="3">
                     <div class="icon"><img src="./bkim/atm.png" border="0"></div>
                     <div class="info">
@@ -245,7 +246,6 @@ function mergeDeep(target, source) {
 }
 
 function sendRequest(method, url, data = {}) {
-
   var jqxhr = $.ajax({
     type: method,
     url: url,
