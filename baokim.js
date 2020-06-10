@@ -113,25 +113,31 @@ class Baokim {
       }
     }
 
-    let html = `<div class="baokim-form-wrapper payment_list"><form method="post" action="http://sandbox.baokim.vn/payment/checkout" id="form-action">
+    let html = `<div class="baokim-form-wrapper payment_list"><form method="post" action="http://baokim.vn/payment/checkout" id="form-action">
                 <div class="row-fluid customer_info">
                     <div class="info">
                         <h2 class="title">Thông tin đơn hàng<!--<img src="images/safe.png" border="0" style="vertical-align: bottom; margin-left: 5px;" />--></h2>
+                        
+                          <input type="hidden" name="api_key" value=${this.apiKey}>
+                          <input type="hidden" name="success_url" value=${configOrder.success_url}>
+                          <input type="hidden" name="cancel_url" value=${configOrder.cancel_url}>
+                          <input type="hidden" name="payment_method_type" value=${configOrder.payment_method_type}>
+
                           <p>
                             <label for="mrc_order_id" class="floatLabel">Mã đơn hàng</label>
-                            <input type="text" name="mrc_order_id" id="mrc_order_id" value="${configOrder.mrc_order_id}" readonly>
+                            <input type="text" name="mrc_order_id" id="mrc_order_id" value="${configOrder.mrc_order_id}" readonly required>
                           </p>
                           <p>
                             <label for="description" class="floatLabel">Mô tả</label>
-                            <input type="text" name="description" id="description" placeholder="Mô tả đơn hàng">
+                            <input type="text" name="description" id="description" placeholder="Mô tả đơn hàng" required>
                           </p>
                           <p>
                             <label for="customer_email" class="floatLabel">Email khách hàng:</label>
-                            <input type="text" name="customer_email" id="customer_email" placeholder="customer@example.com">
+                            <input type="text" name="customer_email" id="customer_email" placeholder="customer@example.com" required>
                           </p>
                           <p>
                             <label for="customer_phone" class="floatLabel">SĐT khách hàng:</label>
-                            <input  type="text" name="customer_phone" id="customer_phone" placeholder="0911111000">
+                            <input  type="text" name="customer_phone" id="customer_phone" placeholder="0911111000" required>
                           </p>
                           <p>
                             <label for="customer_phone" class="floatLabel">Số tiền thanh toán:</label>
@@ -215,7 +221,7 @@ class Baokim {
     }
 
     this.$selector.innerHTML = `
-    <form method="post" action="http://sandbox.baokim.vn/payment/checkout" >
+    <form method="post" action="http://baokim.vn/payment/checkout" >
     <input type="hidden" name="api_key" value=${this.apiKey}>
     <input type="hidden" name="mrc_order_id" value=${configOrder.mrc_order_id}>
     <input type="hidden" name="total_amount" value=${configOrder.total_amount}>
