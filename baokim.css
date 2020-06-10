@@ -407,7 +407,6 @@ img {
 .customer_info input{
     box-shadow:none;
     border-radius: 2px;
-    height: 20px;
     padding: 4px 6px;
     margin-bottom: 10px;
     font-size: 13px;
@@ -513,33 +512,6 @@ img {
     position: absolute;
     top: 10px;
     left: 310px;
-}
-
-.pm_submit {
-    width: 200px;
-    height: 40px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-}
-
-.pm_submit:hover {
-
-}
-
-.submit {
-    margin: 20px 0 0;
-    width: 100%;
-    text-align: center;
-}
-
-.img-active {
-    border: 2px solid blue !important
-}
-
-.img-bank {
-    border: 2px solid white
 }
 
 div .selected {
