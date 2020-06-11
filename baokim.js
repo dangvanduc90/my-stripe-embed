@@ -113,7 +113,7 @@ class Baokim {
       }
     }
 
-    let html = `<div class="baokim-form-wrapper payment_list"><form method="post" action="http://baokim.vn/payment/checkout" id="form-action">
+    let html = `<div class="baokim-form-wrapper payment_list"><form method="post" action="http://sandbox.baokim.vn/payment/checkout" id="form-action">
                 <div class="row-fluid customer_info">
                     <div class="info">
                         <h2 class="title">Thông tin đơn hàng<!--<img src="images/safe.png" border="0" style="vertical-align: bottom; margin-left: 5px;" />--></h2>
@@ -147,7 +147,7 @@ class Baokim {
                 </div>
 
                 <div class="row-fluid method" id="4">
-                    <div class="icon"><img src="./bkim/sercurity.png" border="0"></div>
+                    <div class="icon"><img src="http://demo.baokim.vn/bkim/sercurity.png" border="0"></div>
                     <div class="info">
                         <span class="title">Sử dụng ví Bảo Kim</span>
                         <span class="desc">Thanh toán bằng ví Bảo Kim (Baokim.vn)</span>
@@ -156,7 +156,7 @@ class Baokim {
                 </div>
 
                 <div class="row-fluid method" id="297">
-                    <div class="icon"><img src="./bkim/sercurity.png" border="0"></div>
+                    <div class="icon"><img src="http://demo.baokim.vn/bkim/sercurity.png" border="0"></div>
                     <div class="info">
                         <span class="title">Sử dụng QR code</span>
                         <span class="desc">Thanh toán bằng quẹt mã QR code</span>
@@ -165,7 +165,7 @@ class Baokim {
                 </div>
 
                 <div class="row-fluid method" id="1">
-                    <div class="icon"><img src="./bkim/atm.png" border="0"></div>
+                    <div class="icon"><img src="http://demo.baokim.vn/bkim/atm.png" border="0"></div>
                     <div class="info">
                         <span class="title">Sử dụng thẻ ATM nội địa</span>
                         <span class="desc">Chọn thẻ ngân hàng thanh toán</span>
@@ -181,7 +181,7 @@ class Baokim {
                 </div>
                 <div style="clear: both"></div>
                 <div class="row-fluid method" id="3">
-                    <div class="icon"><img src="./bkim/atm.png" border="0"></div>
+                    <div class="icon"><img src="http://demo.baokim.vn/bkim/atm.png" border="0"></div>
                     <div class="info">
                         <span class="title">Sử dụng thẻ Visa/Master card</span>
                         <span class="desc">Chọn thẻ ngân hàng thanh toán</span>
@@ -221,7 +221,7 @@ class Baokim {
     }
 
     this.$selector.innerHTML = `
-    <form method="post" action="http://baokim.vn/payment/checkout" >
+    <form method="post" action="http://sandbox.baokim.vn/payment/checkout" >
     <input type="hidden" name="api_key" value=${this.apiKey}>
     <input type="hidden" name="mrc_order_id" value=${configOrder.mrc_order_id}>
     <input type="hidden" name="total_amount" value=${configOrder.total_amount}>
