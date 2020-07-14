@@ -61,12 +61,12 @@ class Baokim {
       throw new NotPresentException('configOrder must has key mrc_order_id');
     }
 
-    if (!this.configOrder.hasOwnProperty('success_url')) {
-      throw new NotPresentException('configOrder must has key success_url');
+    if (!this.configOrder.hasOwnProperty('url_success')) {
+      throw new NotPresentException('configOrder must has key url_success');
     }
 
-    if (!this.configOrder.hasOwnProperty('cancel_url')) {
-      throw new NotPresentException('configOrder must has key cancel_url');
+    if (!this.configOrder.hasOwnProperty('url_detail')) {
+      throw new NotPresentException('configOrder must has key url_detail');
     }
 
     if (!this.configOrder.hasOwnProperty('total_amount')) {
@@ -119,8 +119,8 @@ class Baokim {
                         <h2 class="title">Thông tin đơn hàng<!--<img src="images/safe.png" border="0" style="vertical-align: bottom; margin-left: 5px;" />--></h2>
                         
                           <input type="hidden" name="api_key" value=${this.apiKey}>
-                          <input type="hidden" name="success_url" value=${configOrder.success_url}>
-                          <input type="hidden" name="cancel_url" value=${configOrder.cancel_url}>
+                          <input type="hidden" name="url_success" value=${configOrder.url_success}>
+                          <input type="hidden" name="url_detail" value=${configOrder.url_detail}>
                           <input type="hidden" name="payment_method_type" value=${configOrder.payment_method_type}>
 
                           <p>
@@ -225,8 +225,8 @@ class Baokim {
     <input type="hidden" name="api_key" value=${this.apiKey}>
     <input type="hidden" name="mrc_order_id" value=${configOrder.mrc_order_id}>
     <input type="hidden" name="total_amount" value=${configOrder.total_amount}>
-    <input type="hidden" name="success_url" value=${configOrder.success_url}>
-    <input type="hidden" name="cancel_url" value=${configOrder.cancel_url}>
+    <input type="hidden" name="url_success" value=${configOrder.url_success}>
+    <input type="hidden" name="url_detail" value=${configOrder.url_detail}>
     <input type="hidden" name="payment_method_type" value=${configOrder.payment_method_type}>
     <button type="submit" id="customButton" class="stripe-button-el" style="${cssStyle}" ">
         <span>${configButton.title}</span>
